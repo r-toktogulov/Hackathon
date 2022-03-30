@@ -29,6 +29,7 @@ addForm.on("click", async (event) => {
     month: month,
   };
 
+
   for (let k in newContact) {
     if (!newContact[k]) {
       alert("Заполните все поля");
@@ -50,8 +51,6 @@ addForm.on("click", async (event) => {
   inpMonthKPI.val("");
   addModal.modal("hide");
 });
-
-
 
 // ! READ
 
@@ -100,6 +99,4 @@ $(document).on("click", ".btn-delete", async (event) => {
     },
   }).showToast();
 });
-
-
 
