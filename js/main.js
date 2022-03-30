@@ -1,3 +1,4 @@
+
 const API = "http://localhost:8000/kpi";
 //Ruslan: получаем input и присваиваем в их переменные
 let inpName = $(".inp-name");
@@ -27,6 +28,7 @@ addForm.on("click", async (event) => {
     week: week,
     month: month,
   };
+
 
   for (let k in newContact) {
     if (!newContact[k]) {
@@ -97,3 +99,4 @@ $(document).on("click", ".btn-delete", async (event) => {
     },
   }).showToast();
 });
+
