@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const API = "http://localhost:8000/kpi";
 //Ruslan: получаем input и присваиваем в их переменные
 let inpName = $(".inp-name");
@@ -50,58 +49,6 @@ addForm.on("click", async (event) => {
   inpMonthKPI.val("");
   addModal.modal("hide");
 });
-=======
-const API = "http://localhost:8000/kpi";
-
-let inpName = $(".inp-name");
-let inpSurname = $(".inp-surname");
-let inpPhone = $(".inp-phone");
-let inpWeekKPI = $(".inp-weekKPI");
-let inpMonthKPI = $(".inp-monthKPI");
-let addForm = $(".add-form");
-let addModal = $(".modal");
-let btnNewContact = $(".newContact");
-let contactList = $("tbody");
-
-addForm.on("click", ()=> {
-    let name = inpName.val().trim();
-    let surname = inpSurname.val().trim();
-    let phone = inpPhone.val().trim();
-    let week = inpWeekKPI.val().trim();
-    let month = inpMonthKPI.val().trim();
-    
-    let newContact = {
-      name: name,
-      surname: surname,
-      phone: phone,
-      week: week,
-      month: month,
-    };
-
-    for (let k in newContact) {
-        if (!newContact[k]) {
-          alert("Заполните все поля");
-          return;
-        }
-      }
-    
-      const response = await fetch(API, {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify(newContact),
-      });
-      inpName.val("");
-      inpSurname.val("");
-      inpPhone.val("");
-      inpWeekKPI.val("");
-      inpMonthKPI.val("")
-      addModal.modal("hide");
-      
-    });
-
-
 
 // ! READ
 
@@ -150,6 +97,3 @@ $(document).on("click", ".btn-delete", async (event) => {
     },
   }).showToast();
 });
-
-
->>>>>>> 8ffebc562f58abeaaaefc5d7ec98312ec44aef4c
