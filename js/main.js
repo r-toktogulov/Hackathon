@@ -28,7 +28,7 @@ addForm.on("submit", async (event) => {
     week: week,
     month: month,
   };
-
+  // Islam: проверка на заполненность инпутов
   for (let k in newContact) {
     if (!newContact[k]) {
       alert("Заполните все поля");
@@ -48,14 +48,25 @@ addForm.on("submit", async (event) => {
   inpPhone.val("");
   inpWeekKPI.val("");
   inpMonthKPI.val("");
+  Toastify({
+    text: "Успешно добавлено",
+    duration: 3000,
+    newWindow: true,
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "right", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: "green",
+    },
+  }).showToast();
   addModal.modal("hide");
   getContacts();
 });
 
 // ! READ
 
-// Сделал Ислам
-
+// Сделал Ислам добавил функцию read
 async function getContacts() {
   const response = await fetch(`${API}?q=${searchValue}`);
   const data = await response.json();
@@ -121,6 +132,7 @@ $(document).on("click", ".btn-delete", async (event) => {
 });
 
 // ! ПОИСК
+// Сделал Ислам
 let searchInp = $(".inp-search");
 
 searchInp.on("input", (event) => {
@@ -128,7 +140,9 @@ searchInp.on("input", (event) => {
   currentPage = 1;
   getContacts();
 });
+
 // ! Update
+// Ruslan
 let editName = $(".edit-name");
 let editSurname = $(".edit-surname");
 let editPhone = $(".edit-phone");
@@ -172,9 +186,24 @@ editForm.on("submit", async (event) => {
     },
     body: JSON.stringify(editedContacts),
   });
+  Toastify({
+    text: "Успешно изменено",
+    duration: 3000,
+    newWindow: true,
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "right", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: "green",
+    },
+  }).showToast();
   getContacts();
   editModal.modal("hide");
 });
+
+//! Pagination
+// Ruslan
 let prevBtn = $(".prev-btn");
 let nextBtn = $(".next-btn");
 let postsPerPage = 5; //! Количество отображаемых элементов на одной странице

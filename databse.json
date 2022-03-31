@@ -33,36 +33,20 @@
       "id": 4
     },
     {
-      "name": "Ruslan",
-      "surname": "Toktogulov",
-      "phone": 999711101,
-      "week": 100,
-      "month": 99,
-      "id": 9
-    },
-    {
-      "name": "Islam",
-      "surname": "JJJJJJJ",
-      "phone": "333444666888",
-      "week": "100",
-      "month": "99",
-      "id": 10
-    },
-    {
-      "name": "ываодлывоа",
-      "surname": "ыдлвоадлыва",
-      "phone": "0999311345",
-      "week": "100",
-      "month": "99",
-      "id": 11
-    },
-    {
       "name": "jskdjf",
       "surname": "skldjfls",
-      "phone": "44444",
-      "week": "100",
-      "month": "99",
+      "phone": 44444,
+      "week": 100,
+      "month": 900,
       "id": 12
+    },
+    {
+      "name": "Talgat",
+      "surname": "sdfsdf",
+      "phone": "0999555444",
+      "week": "100",
+      "month": "100",
+      "id": 13
     }
   ]
 }

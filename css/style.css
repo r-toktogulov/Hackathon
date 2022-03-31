@@ -58,3 +58,6 @@ tbody tr:nth-child(even) {
 .pagination button {
   margin: 5px;
 }
+tbody tr:hover {
+  background-color: lightblue;
+}
