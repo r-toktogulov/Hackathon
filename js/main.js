@@ -51,7 +51,6 @@ addForm.on("click", async (event) => {
 });
 
 // ! READ
-
 async function getContacts() {
   const response = await fetch(`${api}?q=${searchValue}`);
   const data = await response.json();
@@ -79,10 +78,9 @@ getContacts();
 // ! delete
 $(document).on("click", ".btn-delete", async (event) => {
   let id = event.currentTarget.id;
-  await fetch(`${API}/${id}`),
-    {
-      method: "DELETE",
-    };
+  await fetch(`${API}/${id}`, {
+    method: "DELETE",
+  });
   getContacts();
   Toastify({
     text: "Успешно удалено",
@@ -96,4 +94,13 @@ $(document).on("click", ".btn-delete", async (event) => {
       background: "green",
     },
   }).showToast();
+});
+
+// ! ПОИСК
+let searchInp = $(".inp-search");
+
+searchInp.on("input", (event) => {
+  searchValue = event.target.value;
+  currentPage = 1;
+  getContacts();
 });

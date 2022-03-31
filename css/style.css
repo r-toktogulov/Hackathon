@@ -1,9 +1,23 @@
+body {
+  background-image: url("https://img.freepik.com/free-vector/white-abstract-background-design_23-2148825582.jpg?t=st=1648732084~exp=1648732684~hmac=e646491c6888f1b3b3fae33498559a2ff372eb174ae947040abf178969532c32&w=740");
+}
+
 .search-block {
   display: flex;
   justify-content: space-around;
 }
 .newContact {
   margin: 20px;
+}
+
+.logo {
+  width: 85px;
+}
+
+h1 {
+  font-family: "Libre Baskerville", serif;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
 }
 
 form {
