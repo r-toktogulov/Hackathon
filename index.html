@@ -11,10 +11,22 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet">
     <title>KPI</title>
   </head>
   <body>
+
+
+  
+             <h1>Students KPI</h1>
+
+
+   
     <div class="search-block">
+    
       <button
         class="btn btn-primary newContact"
         data-bs-toggle="modal"
@@ -80,6 +92,45 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="contacts">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Имя</th>
+          <th>Фамилия</th>
+          <th>Номер телефона</th>
+          <th>Недельный KPI</th>
+          <th>Ежемесячный KPI</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div class="pagination">
+    <button class="btn btn-primary prev-btn">prev</button>
+    <button class="btn btn-primary next-btn">next</button>
+  </div>
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Изменить контакт</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form class="edit-form">
+                  <input
+                    type="text"
+                    class="form-control edit-name"
+                    placeholder="Введите имя"
+                  />
+                  <input
+                    type="text"
+                    class="form-control edit-surname"
+                    placeholder="Введите фамилию"
+                  />
+                  <input>
     <div class="contacts">
       <table class="table">
         <thead>
@@ -124,6 +175,7 @@
                       placeholder="Введите номер телефона"
                     />
                     <input
+
                     type="number"
                     class="form-control edit-weekKPI"
                     placeholder="Введите недельный KPI"
