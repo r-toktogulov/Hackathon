@@ -19,16 +19,12 @@
   </head>
   <body>
 
-    <div class="head">
-      <div class="container">
-        <div class="header">
-         <h1>Students KPI</h1>
-        </div>
-      </div>
-    </div>
+
+  
+             <h1>Students KPI</h1>
 
 
-    
+   
     <div class="search-block">
     
       <button
@@ -36,66 +32,63 @@
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
       >
-        Добавить студента
+        Новый студент
       </button>
       <form action="submit">
-        <input
-          class="inp-search"
-          type="search"
-          placeholder="Поиск"
-          class="search-input"
-        />
+        <input class="inp-search" type="search" placeholder="Поиск" class="search-input" />
+        
       </form>
     </div>
     <div
-    class="modal fade"
-    id="exampleModal"
-    tabindex="-1"
-    aria-labelledby="exampleModalLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">
-            Добавить новый контакт
-          </h5>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="modal-body">
-          <form class="add-form">
-            <input
-              type="text"
-              class="form-control inp-name"
-              placeholder="Введите имя"
-            />
-            <input
-              type="text"
-              class="form-control inp-surname"
-              placeholder="Введите фамилию"
-            />
-            <input
-              type="number"
-              class="form-control inp-phone"
-              placeholder="Введите номер телефона"
-            />
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Добавить нового студента
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form class="add-form">
+              <input
+                type="text"
+                class="form-control inp-name"
+                placeholder="Введите имя"
+              />
+              <input
+                type="text"
+                class="form-control inp-surname"
+                placeholder="Введите фамилию"
+              />
+              <input
+                type="number"
+                class="form-control inp-phone"
+                placeholder="Введите номер телефона"
+              />
               <input
               type="number"
               class="form-control inp-weekKPI"
-              placeholder="Введите Недельный KPI"
+              placeholder="Введите недельный KPI"
             />
             <input
-            type="number"
-            class="form-control inp-monthKPI"
-            placeholder="Введите Месячный KPI"
-          />
-            <button type="submit" class="btn btn-primary">Сохранить</button>
-          </form>
+                type="number"
+                class="form-control inp-monthKPI"
+                placeholder="Введите месячный KPI"
+              />
+              <button type="submit" class="btn btn-primary">Сохранить</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -137,33 +130,72 @@
                     class="form-control edit-surname"
                     placeholder="Введите фамилию"
                   />
-                  <input
+                  <input>
+    <div class="contacts">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Номер телефона</th>
+            <th>Недельный KPI</th>
+            <th>Месячный KPI</th>
+
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="pagination">
+      <button class="btn btn-primary prev-btn">prev</button>
+      <button class="btn btn-primary next-btn">next</button>
+    </div>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Изменить</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="edit-form">
+                    <input
+                      type="text"
+                      class="form-control edit-name"
+                      placeholder="Введите имя"
+                    />
+                    <input
+                      type="text"
+                      class="form-control edit-surname"
+                      placeholder="Введите фамилию"
+                    />
+                    <input
+                      type="number"
+                      class="form-control edit-phone"
+                      placeholder="Введите номер телефона"
+                    />
+                    <input
+
                     type="number"
-                    class="form-control edit-phone"
-                    placeholder="Введите номер телефона"
+                    class="form-control edit-weekKPI"
+                    placeholder="Введите недельный KPI"
                   />
                   <input
-                  type="number"
-                  class="form-control edit-weekKPI"
-                  placeholder="Введите Недельный KPI"
-                />
-                <input
-                type="number"
-                class="form-control edit-monthKPI"
-                placeholder="Введите Месячный KPI"
-              />
-                  <button type="submit" class="btn btn-primary">Изменить</button>
+                      type="number"
+                      class="form-control edit-monthKPI"
+                      placeholder="Введите месячный KPI"
+                    />
+                    <button type="submit" class="btn btn-primary">Изменить</button>
+            </div>
+           
           </div>
-         
         </div>
       </div>
-    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
