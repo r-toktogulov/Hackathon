@@ -120,7 +120,6 @@ $(document).on("click", ".btn-delete", async (event) => {
   }).showToast();
 });
 
-
 // ! ПОИСК
 let searchInp = $(".inp-search");
 
@@ -128,7 +127,7 @@ searchInp.on("input", (event) => {
   searchValue = event.target.value;
   currentPage = 1;
   getContacts();
-=======
+});
 // ! Update
 let editName = $(".edit-name");
 let editSurname = $(".edit-surname");
@@ -198,5 +197,4 @@ prevBtn.on("click", () => {
   currentPage--;
   getContacts();
   window.scrollTo(0, 0);
-
 });
